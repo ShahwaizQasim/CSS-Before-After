@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: gray;
+  font-family: tahoma;
+}
+.box {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* for button 1 */
+
+.btn1,
+.btn2,
+.btn3,
+.btn4,
+.btn5 {
+  height: 50px;
+  width: 200px;
+  background-color: white;
+  border: 2px solid blue;
+  color: blue;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.btn1::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  /* width: 10%; */
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-90%);
+  transition: 0.6s;
+}
+.btn1:hover::before {
+  transform: translateX(0%);
+  /* width: 100%; */
+}
+.btn1:hover {
+  border-color: white;
+  color: white;
+}
+
+/* for button 2 */
+
+/* .btn2{
+    height: 50px;
+    width: 200px;
+    font-size: 1.2rem;
+    border: 2px solid blue;
+    border-radius: 10px;
+    color: blue;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+} */
+
+/* before pehly */
+.btn2::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-90%);
+  transition: 0.6s;
+}
+.btn2:hover::before {
+  transform: translateX(-50%);
+}
+
+/* after bad me */
+.btn2::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(90%);
+  transition: 0.6s;
+}
+.btn2:hover::after {
+  transform: translateX(50%);
+}
+.btn2:hover {
+  color: white;
+  border-color: white;
+}
+
+/* for button 3 */
+
+.btn3 {
+  color: white;
+  border-color: #fff;
+}
+
+.btn3::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-50%);
+  transition: 0.6s;
+}
+.btn3:hover::before {
+  transform: translateX(-100%);
+}
+
+/* after bad me */
+.btn3::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(50%);
+  transition: 0.6s;
+}
+.btn3:hover::after {
+  transform: translateX(100%);
+}
+.btn3:hover {
+  color: blue;
+  border-color: blue;
+}
+
+/* for button 4 */
+
+.btn4 {
+  color: white;
+  border-color: white;
+}
+
+.btn4::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateY(-50%);
+  transition: 0.6s;
+}
+.btn4:hover::before {
+  transform: translateY(-100%);
+}
+
+/* after bad me */
+.btn4::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateY(50%);
+  transition: 0.6s;
+}
+.btn4:hover::after {
+  transform: translateY(100%);
+}
+.btn4:hover {
+  color: green;
+  border-color: green;
+}
+
+/* for button 5 */
+
+.btn5 {
+  color: red;
+  border-color: red;
+}
+
+.btn5::before {
+  content: "";
+  height: 100%;
+  width: 50%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+.btn5:hover::before {
+  transform: translateX(0%) rotate(180deg);
+}
+
+/* after bad me */
+.btn5::after {
+  content: "";
+  height: 100%;
+  width: 50%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  transform: translateX(100%);
+  transition: 0.6s;
+}
+.btn5:hover::after {
+  transform: translateX(0%) rotate(-180deg);
+}
+.btn5:hover {
+  color: white;
+  border-color: white;
+}
+
+/* for button 6 */
+
+.btn6 {
+  height: 50px;
+  width: 200px;
+  background-color: #fff;
+  color: black;
+  border: 2px solid black;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.8s;
+}
+.btn6::before {
+  content: "";
+  height: 200px;
+  width: 200px;
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-1%) translateY(-40%) scale(0);
+  border-radius: 50%;
+  transition: 0.6s;
+}
+.btn6:hover::before {
+  transform: translateX(-1%) translateY(-40%) scale(100%);
+}
+.btn6:hover {
+  color: white;
+  border-color: white;
+}
+
+/* For Article  */
+
+.box > article {
+  height: 200px;
+  width: 250px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+.box > article > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.box > article:hover > img {
+  transform: scale(1.1);
+}
+.box > article::before {
+  content: "Hello";
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-250%);
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  z-index: 1;
+  transition: 0.6s;
+}
+.box > article:hover::before {
+  transform: translateX(-50%) translateY(0);
+}
+
+.box > article::after {
+  content: "Hello my name is Syed Shahwaiz Qasim And I am Student at Illma University.";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  z-index: 1;
+  text-align: center;
+  padding: 20px 20px;
+  transition: 0.6s;
+}
+.box > article:hover::after {
+    transform: translateY(0);
+  }
